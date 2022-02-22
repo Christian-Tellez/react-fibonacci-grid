@@ -1,0 +1,8 @@
+ul {
+  display: grid;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 2% 2% 2% 2%;
+  /* x50 auto columns, don't judge me */
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+}

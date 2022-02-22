@@ -1,0 +1,9 @@
+li {
+  outline: 1px solid rgba(144, 175, 175, 0.75);
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+li:hover {
+  cursor: pointer;
+}
