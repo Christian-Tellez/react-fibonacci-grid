@@ -2,9 +2,9 @@ import React from "react";
 import Cell from "./Cell";
 import "./Grid.css";
 
-const Grid = ({ gridItems }) => {
-const increaseValueHandler = (row, column) => {
-    console.log(row, column);
+const Grid = ({ gridItems, onIncreaseValue }) => {
+const increaseValueHandler = (row, column, checkFibonacci, value) => {
+  onIncreaseValue(row, column, checkFibonacci, value);
 }
 
   return (

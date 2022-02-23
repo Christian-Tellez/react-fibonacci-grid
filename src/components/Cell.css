@@ -7,3 +7,11 @@ li {
 li:hover {
   cursor: pointer;
 }
+
+.yellowBackground {
+  background-color: rgb(185, 185, 8);
+}
+
+.greenBackground {
+  background-color: rgb(8, 189, 8);
+}
