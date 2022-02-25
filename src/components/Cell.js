@@ -1,24 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 import "./Cell.css";
 
 const Cell = (props) => {
-  const isPerfectSquare = (number) => {
-    const square = parseInt(Math.sqrt(number));
-    return (square * square === number);
-  }
+  const liElement = useRef(null);
 
-  const isFibonacci = (number) => {
-    return isPerfectSquare(5 * number * number + 4) ||
-           isPerfectSquare(5 * number * number - 4);
-  }
+  useEffect(() => {
+
+    liElement.current.style.backgroundColor = props.value ? "rgb(185, 185, 8)" : "rgb(8, 189, 8)";
+
+    const timer = setTimeout(() => {
+      liElement.current.style.backgroundColor = "";
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [props.value]);
 
   const clickHandler = () => {
-    const checkFibonacci = isFibonacci(props.value + 1);
-    props.onIncreaseValue(props.row, props.column, checkFibonacci, props.value + 1);
+    props.onIncreaseValue(props.row, props.column);
   };
 
-  return <li onClick={clickHandler} className={}>{props.value ? props.value : " "}</li>;
+  return <li ref={liElement} style={{}} onClick={clickHandler}>{props.value ? props.value : " "}</li>;
 };
 
 export default Cell;

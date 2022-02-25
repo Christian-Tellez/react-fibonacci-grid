@@ -3,8 +3,8 @@ import Cell from "./Cell";
 import "./Grid.css";
 
 const Grid = ({ gridItems, onIncreaseValue }) => {
-const increaseValueHandler = (row, column, checkFibonacci, value) => {
-  onIncreaseValue(row, column, checkFibonacci, value);
+const increaseValueHandler = (row, column) => {
+  onIncreaseValue(row, column);
 }
 
   return (
